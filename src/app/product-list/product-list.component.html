@@ -1,0 +1,51 @@
+<!-- src/app/product-details/product-details.component.html -->
+<div *ngIf="products && products.length > 0" class="">
+    <h2>Product Details</h2>
+    <div class="product-list">
+        <div class="product-item" *ngFor="let product of products">
+            <h3>{{ product.title }}</h3>
+            <p><strong>Description:</strong> {{ product.description }}</p>
+            <p><strong>Category:</strong> {{ product.category }}</p>
+            <p><strong>Price:</strong> ${{ product.price }}</p>
+            <p><strong>Discount Percentage:</strong> {{ product.discountPercentage }}</p>
+            <p><strong>Rating:</strong> {{ product.rating }}</p>
+            <p><strong>Stock:</strong> {{ product.stock }}</p>
+            <p><strong>Tags:</strong> {{ product.tags.join(', ') }}</p>
+            <p><strong>Brand:</strong> {{ product.brand }}</p>
+            <p><strong>SKU:</strong> {{ product.sku }}</p>
+            <p><strong>Weight:</strong> {{ product.weight }}</p>
+            <p><strong>Dimensions:</strong> Width: {{ product.dimensions.width }}, Height: {{ product.dimensions.height }}, Depth: {{ product.dimensions.depth }}</p>
+            <p><strong>Warranty Information:</strong> {{ product.warrantyInformation }}</p>
+            <p><strong>Shipping Information:</strong> {{ product.shippingInformation }}</p>
+            <p><strong>Availability Status:</strong> {{ product.availabilityStatus }}</p>
+            <h4>Reviews:</h4>
+            <ul>
+                <li *ngFor="let review of product.reviews">
+                    <p><strong>Rating:</strong> {{ review.rating }}</p>
+                    <p><strong>Comment:</strong> {{ review.comment }}</p>
+                    <p><strong>Date:</strong> {{ review.date | date }}</p>
+                    <p><strong>Reviewer:</strong> {{ review.reviewerName }} ({{ review.reviewerEmail }})</p>
+                </li>
+            </ul>
+            <p><strong>Return Policy:</strong> {{ product.returnPolicy }}</p>
+            <p><strong>Minimum Order Quantity:</strong> {{ product.minimumOrderQuantity }}</p>
+            <p><strong>Created At:</strong> {{ product.meta.createdAt | date }}</p>
+            <p><strong>Updated At:</strong> {{ product.meta.updatedAt | date }}</p>
+            <p><strong>Barcode:</strong> {{ product.meta.barcode }}</p>
+            <p><strong>QR Code:</strong> <img [src]="product.meta.qrCode" alt="QR Code"></p>
+            <div>
+                <h4>Images:</h4>
+                <ul class="product-images">
+                    <li *ngFor="let image of product.images">
+                        <img class="product-image" [src]="image" alt="Product Image">
+                    </li>
+                </ul>
+                <img class="thumbnail" [src]="product.thumbnail" alt="Thumbnail">
+            </div>
+            <hr>
+        </div>
+    </div>
+</div>
+<div *ngIf="products && products.length === 0">
+    No products found.
+</div>
