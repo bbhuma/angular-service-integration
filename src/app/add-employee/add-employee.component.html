@@ -1,0 +1,72 @@
+<form [formGroup]="employeeForm" (ngSubmit)="onSubmit()" class="employee-form-container" class="container mt-4">
+    <div class="form-group">
+      <label for="firstName">First Name:</label>
+       <input id="firstName" formControlName="firstName" type="text" placeholder="Enter first name" class="form-control">
+    </div>
+    
+    <div class="form-group">
+      <label for="lastName">Last Name:</label>
+      <input id="lastName" formControlName="lastName" type="text" placeholder="Enter last name" class="form-control">
+    </div>
+    
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input id="email" formControlName="email" type="email" placeholder="Enter email" class="form-control">
+    </div>
+    
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input id="password" formControlName="password" type="password" placeholder="Enter password" class="form-control">
+    </div>
+    
+    <div class="form-group">
+      <label for="age">Age:</label>
+      <input id="age" formControlName="age" type="number" placeholder="Enter age" class="form-control">
+    </div>
+    
+    <div class="form-group">
+      <label for="dob">Date of Birth:</label>
+      <input id="dob" formControlName="dob" type="date" class="form-control">
+    </div>
+    
+    <div class="form-group">
+        <label for="gender">Gender:</label>
+        <div>
+          <div class="form-check form-check-inline">
+            <input id="gender-male" formControlName="gender" type="radio" value="male" class="form-check-input">
+            <label for="gender-male" class="form-check-label">Male</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input id="gender-female" formControlName="gender" type="radio" value="female" class="form-check-input">
+            <label for="gender-female" class="form-check-label">Female</label>
+          </div>
+        </div>
+      </div>
+    
+    <div class="form-group">
+      <label for="department">Department:</label>
+      <select id="department" formControlName="department" class="form-control">
+        <option value="HR">HR</option>
+        <option value="Engineering">Engineering</option>
+        <option value="Marketing">Marketing</option>
+      </select>
+    </div>
+    
+    <div class="form-group">
+      <label for="resume">Resume:</label>
+      <input id="resume" formControlName="resume" type="file" class="form-control-file">
+    </div>
+    
+    <div class="form-group">
+        <label for="bio">Bio:</label>
+      <textarea id="bio" formControlName="bio" placeholder="Write a brief bio" class="form-control"></textarea>
+    </div>
+    
+    <div class="form-group form-check">
+      <input id="terms" formControlName="terms" type="checkbox" class="form-check-input">
+      <label for="terms" class="form-check-label">Accept Terms</label>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Add Employee</button>
+  </form>
+  
