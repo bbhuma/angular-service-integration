@@ -38,14 +38,11 @@ export class AddEmployeeComponent implements OnInit {
   postData(): void {
     const formData: Employee = this.employeeForm.value;
     console.log('Form Data:', formData);
-    
-    // Optionally, if you still want to send data to a server
-    /*
-    this.http.post<Employee>('http://localhost/api/employees', formData).subscribe(response => {
+    this.http.post<Employee>('http://localhost:8080/api/employees', formData).subscribe(response => {
       console.log('Employee added successfully!', response);
     }, error => {
       console.error('Error adding employee', error);
     });
-    */
+    this.employeeForm.reset(); 
   }
 }
