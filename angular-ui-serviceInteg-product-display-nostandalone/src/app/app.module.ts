@@ -15,6 +15,7 @@ import { AddproductComponent } from './addproduct/addproduct.component';
 import { AboutComponent } from './about/about.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 @NgModule({
     declarations: [
@@ -26,7 +27,8 @@ import { AddEmployeeComponent } from './add-employee/add-employee.component';
         SignUpComponent,
         AddproductComponent,
         AboutComponent,
-        ContactUsComponent
+        ContactUsComponent,
+        NavBarComponent
 
     ],
     imports: [
