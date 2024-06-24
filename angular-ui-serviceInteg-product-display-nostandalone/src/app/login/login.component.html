@@ -1,0 +1,24 @@
+<div class="login-container">
+    <div class="logo">
+        <!-- Optional: Replace with your company logo -->
+        <img src="assets\download.png" alt="Kalki's World" width="100px" height="100px">
+
+    </div>
+    <form (ngSubmit)="login()" #loginForm="ngForm">
+        <div class="form-group">
+            <input type="email" id="username" name="username" placeholder="Username (Email)" required
+                   [(ngModel)]="username" #usernameInput="ngModel" email>
+            <span class="validation-icon valid-icon" *ngIf="usernameInput.valid && (usernameInput.dirty || usernameInput.touched)">&#10004;</span>
+            <span class="validation-icon invalid-icon" *ngIf="usernameInput.invalid && (usernameInput.dirty || usernameInput.touched)">&#10060;</span>
+        </div>
+        <div class="form-group">
+            <input type="password" id="password" name="password" placeholder="Password" required
+                   [(ngModel)]="password" #passwordInput="ngModel" minlength="8">
+            <span class="validation-icon valid-icon" *ngIf="passwordInput.valid && (passwordInput.dirty || passwordInput.touched)">&#10004;</span>
+            <span class="validation-icon invalid-icon" *ngIf="passwordInput.invalid && (passwordInput.dirty || passwordInput.touched)">&#10060;</span>
+        </div>
+        <button type="submit" class="btn-login" [disabled]="loginForm.invalid">Login</button>
+    </form>
+    <p><a href="#" class="forgot-password">Forgot Password?</a></p>
+    <button type="button" class="signup-btn">Sign Up</button>
+</div>
