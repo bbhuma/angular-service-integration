@@ -5,11 +5,10 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { ProductListComponent } from './product-list/product-list.component';
-import { ProductService } from './product.service';
+import { ProductService } from './product-list/product.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EmployeesComponent } from './employees/employees.component';
 import { LoginComponent } from './login/login.component';
-import { SignUpComponent } from './sign-up/sign-up.component';
 import { AddproductComponent } from './addproduct/addproduct.component';
 import { AboutComponent } from './about/about.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
@@ -17,6 +16,8 @@ import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { UserService } from './sign-up/sign-up.service';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 @NgModule({
     declarations: [
@@ -31,7 +32,6 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
         ContactUsComponent,
         NavBarComponent,
         ResetPasswordComponent
-
     ],
     imports: [
         BrowserModule,
@@ -40,7 +40,7 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
         ReactiveFormsModule,
         AppRoutingModule
     ],
-    providers: [ProductService],
+    providers: [ProductService,UserService],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,29 @@
 /* src/app/sign-up/sign-up.component.css */
-
+.form-group {
+    margin-bottom: 15px; /* Adjust margin as per your design */
+  }
+  
+  label {
+    display: block; 
+    margin-bottom: 5px; /* Space between label and input */
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  select {
+    width: 100%; /* Full width */
+    padding: 10px; /* Adjust padding as per your design */
+    font-size: 14px; /* Adjust font size as per your design */
+    border: 1px solid #ccc; /* Border style */
+    border-radius: 4px; /* Rounded corners */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+  }
+  
+  select {
+    /* Additional styles specific to dropdown */
+    height: 40px; /* Match the height of other form controls */
+  }
 .sign-up-container {
     width: 300px;
     margin: 20px auto;
@@ -18,6 +42,7 @@
   
   .form-group {
     margin-bottom: 15px;
+    width: 100%;
     text-align: left;
   }
   
