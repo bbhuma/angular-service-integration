@@ -11,6 +11,7 @@ body{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     margin: 0 auto; /* Center the container horizontally */
+    position: relative;
 }
 
 .logo {
@@ -56,6 +57,7 @@ input[type="email"], input[type="password"] {
     background-color: #ffcc00;
     margin-bottom: 20px;
     color: #fff;
+    font-weight: bold;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
@@ -81,6 +83,7 @@ input[type="email"], input[type="password"] {
 .signup-btn {
     background-color: #ffc107;
     color: #fff;
+    font-weight: bold;
     border: none;
     padding: 10px 20px;
     font-size: 16px;

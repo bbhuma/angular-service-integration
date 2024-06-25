@@ -1,9 +1,10 @@
 <div class="login-container">
     <div class="logo">
         <!-- Optional: Replace with your company logo -->
-        <img src="assets\download.png" alt="Kalki's World" width="100px" height="100px">
+        <img src="assets/download.jpeg" alt="Kalki's World" width="150px" height="100px">
 
     </div>
+    <p style="position: absolute;left:20px;top: 120px;">Login </p>
     <form (ngSubmit)="login()" #loginForm="ngForm">
         <div class="form-group">
             <input type="email" id="username" name="username" placeholder="Username (Email)" required
@@ -19,6 +20,6 @@
         </div>
         <button type="submit" class="btn-login" [disabled]="loginForm.invalid">Login</button>
     </form>
-    <p><a href="#" class="forgot-password">Forgot Password?</a></p>
-    <button type="button" class="signup-btn">Sign Up</button>
+    <p><a href="#" class="forgot-password" routerLink="/reset-password">Forgot Password?</a></p>
+    <button type="button" class="signup-btn" routerLink="/signup" routerLinkActive="active">Sign Up</button>
 </div>
