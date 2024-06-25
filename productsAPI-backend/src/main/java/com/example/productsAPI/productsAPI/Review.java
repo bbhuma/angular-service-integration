@@ -1,4 +1,4 @@
-package com.example.productsAPI;
+package com.example.productsAPI.productsAPI;
 
 import java.util.Date;
 

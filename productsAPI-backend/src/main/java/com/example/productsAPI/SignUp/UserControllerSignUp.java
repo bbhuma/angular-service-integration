@@ -1,4 +1,4 @@
-package com.example.productsAPI;
+package com.example.productsAPI.SignUp;
 
 import java.time.LocalDateTime;
 import java.util.List;
