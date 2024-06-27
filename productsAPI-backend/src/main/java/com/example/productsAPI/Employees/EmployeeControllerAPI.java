@@ -50,7 +50,7 @@ public class EmployeeControllerAPI {
 	 * ResponseEntity<Employee123>(savedEmployee, HttpStatus.CREATED); }
 	 */
 	@RestController
-	@RequestMapping("/api/employees")
+	@RequestMapping("/api/employees/add")
 	@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
 	public class EmployeeController {
 
