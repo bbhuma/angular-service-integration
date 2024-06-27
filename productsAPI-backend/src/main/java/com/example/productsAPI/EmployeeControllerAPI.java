@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-
+/*
 @RestController
 @RequestMapping("/api/employees")
 public class EmployeeControllerAPI {
@@ -19,7 +19,6 @@ public class EmployeeControllerAPI {
 
 	
 
-	/*
 	 * @PostMapping public ResponseEntity<Employee123>
 	 * addEmployee(@RequestParam("firstName") String firstName,
 	 * 
@@ -49,26 +48,26 @@ public class EmployeeControllerAPI {
 	 * Employee123 savedEmployee = employeeRepository.save(employee); return new
 	 * ResponseEntity<Employee123>(savedEmployee, HttpStatus.CREATED); }
 	 */
-	@RestController
-	@RequestMapping("/api/employees")
-	@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
-	public class EmployeeController {
+@RestController
+@RequestMapping("/api/employees")
+@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
+public class EmployeeControllerAPI {
 
-		@Autowired
-		private EmployeeRepository employeeRepository;
-		
-		@CrossOrigin
-		@PostMapping
-		public ResponseEntity<Employee12> addEmployee(@RequestBody Employee12 employee) {
-			try {
-				Employee12 savedEmployee = employeeRepository.save(employee);
-				return new ResponseEntity<>(savedEmployee, HttpStatus.CREATED);
-			} catch (Exception e) {
-				return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
-			}
+	@Autowired
+	private EmployeeRepository employeeRepository;
+
+	@CrossOrigin
+	@PostMapping
+	public ResponseEntity<Employee12> addEmployee(@RequestBody Employee12 employee) {
+		try {
+			Employee12 savedEmployee = employeeRepository.save(employee);
+			return new ResponseEntity<>(savedEmployee, HttpStatus.CREATED);
+		} catch (Exception e) {
+			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}
 }
+
 interface EmployeeRepository extends JpaRepository<Employee12, Long> {
-    // Define custom queries or methods if needed
+	// Define custom queries or methods if needed
 }
