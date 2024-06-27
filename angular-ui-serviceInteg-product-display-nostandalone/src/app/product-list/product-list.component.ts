@@ -1,6 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { ProductService } from '../product.service';  // Adjust the path as necessary
-import { Product } from '../product.model';  // Adjust the path as necessary
+import { ProductService } from './product.service';  // Adjust the path as necessary
+import { Product } from '../models/product.model';  // Adjust the path as necessary
 
 @Component({
   selector: 'app-product-list',

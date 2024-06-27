@@ -1,4 +1,4 @@
-package com.example.productsAPI;
+package com.example.productsAPI.Employees;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -50,7 +50,7 @@ public class EmployeeControllerAPI {
 	 * ResponseEntity<Employee123>(savedEmployee, HttpStatus.CREATED); }
 	 */
 	@RestController
-	@RequestMapping("/api/employees")
+	@RequestMapping("/api/employees/add")
 	@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
 	public class EmployeeController {
 

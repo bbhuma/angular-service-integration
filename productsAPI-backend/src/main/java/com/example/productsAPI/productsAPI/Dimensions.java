@@ -1,6 +1,4 @@
-package com.example.productsAPI;
-
-import java.util.Date;
+package com.example.productsAPI.productsAPI;
 
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.Entity;
@@ -15,11 +13,10 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Embeddable
-public class Meta {
-    private Date createdAt;
-    private Date updatedAt;
-    private String barcode;
-    private String qrCode;
+public class Dimensions {
+    private double width;
+    private double height;
+    private double depth;
 
     // Getters and Setters
 }

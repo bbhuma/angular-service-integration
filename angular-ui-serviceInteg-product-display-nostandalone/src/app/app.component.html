@@ -1,6 +1,58 @@
 <!-- src/app/app.component.html -->
 <div style="text-align:center">
-  <h1 style="font-size: 40px;font-family: sans-serif,Arial, Helvetica, sans-serif;background-color: green;color: white;padding: 10px;">Welcome to Product Display</h1>
+  <h1 style="font-size: 40px;font-family: sans-serif,Arial, Helvetica, sans-serif;background-color: green;color: white;padding: 10px;">Welcome to Management System</h1>
 </div>
-<app-nav-bar></app-nav-bar>
+<!-- <app-nav-bar></app-nav-bar> -->
+<nav class="navbar">
+  <a routerLink="/home" routerLinkActive="active">Home Page</a>
+
+  <!-- Employees Dropdown -->
+  <div class="dropdown">
+    <button class="dropbtn">
+      Employees <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a routerLink="/employees" routerLinkActive="active">Employees List</a>
+      <a routerLink="/addemployee" routerLinkActive="active">Add Employee</a>
+    </div>
+  </div>
+
+  <!-- Students Dropdown -->
+  <div class="dropdown">
+    <button class="dropbtn">
+      Students <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a routerLink="/students" routerLinkActive="active">Students List</a>
+      <a routerLink="/addstudent" routerLinkActive="active">Add Student</a>
+    </div>
+  </div>
+
+  <!-- Products Dropdown -->
+  <div class="dropdown">
+    <button class="dropbtn">
+      Products <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a routerLink="/products" routerLinkActive="active">Products List</a>
+      <a routerLink="/addproduct" routerLinkActive="active">Add Product</a>
+    </div>
+  </div>
+
+  <!-- Profile Dropdown -->
+  <div class="dropdown">
+    <button class="dropbtn">
+      Profile <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a routerLink="/profile" routerLinkActive="active">Profile</a>
+      <a routerLink="/about" routerLinkActive="active">About</a>
+      <a routerLink="/contact" routerLinkActive="active">Contact Us</a>
+    </div>
+  </div>
+
+  <a routerLink="/login" routerLinkActive="active">Login</a>
+  <a routerLink="/signup" routerLinkActive="active">Sign Up</a>
+</nav>
+
 <router-outlet></router-outlet>
